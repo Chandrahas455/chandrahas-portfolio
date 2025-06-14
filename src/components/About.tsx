@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -52,7 +53,7 @@ const About = () => {
                   whileInView={{ width: '100%' }}
                   transition={{ duration: 1, delay: 0.5 }}
                   viewport={{ once: true }}
-                  className="absolute bottom-2 left-0 h-1 bg-black group-hover:bg-yellow-500 transition-colors duration-300"
+                  className="absolute bottom-0 left-0 h-1 bg-black group-hover:bg-yellow-500 transition-colors duration-300"
                 />
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -131,3 +132,4 @@ const About = () => {
 };
 
 export default About;
+
