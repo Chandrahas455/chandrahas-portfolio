@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { StarBorder } from './ui/star-border';
@@ -180,7 +179,7 @@ const Portfolio = () => {
 
   // Create display cards for featured projects
   const createFeaturedCards = () => {
-    const featuredProjects = projects.filter(project => project.categories?.includes('featured')).slice(0, 4);
+    const featuredProjects = projects.filter(project => project.categories?.includes('featured')).slice(0, 3);
     return featuredProjects.map((project, index) => ({
       title: project.title,
       description: project.description,
@@ -190,9 +189,7 @@ const Portfolio = () => {
         ? "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 cursor-pointer"
         : index === 1
         ? "[grid-area:stack] translate-x-16 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 cursor-pointer"
-        : index === 2
-        ? "[grid-area:stack] translate-x-32 translate-y-20 hover:translate-y-10 cursor-pointer"
-        : "[grid-area:stack] translate-x-48 translate-y-30 hover:translate-y-20 cursor-pointer",
+        : "[grid-area:stack] translate-x-32 translate-y-20 hover:translate-y-10 cursor-pointer",
       onClick: () => handleProjectClick(project),
       project: project
     }));
