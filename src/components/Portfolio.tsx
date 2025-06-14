@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { StarBorder } from './ui/star-border';
@@ -178,12 +179,12 @@ const Portfolio = () => {
 
   // Create display cards for featured projects in specific order
   const createFeaturedCards = () => {
-    // Get specific projects in the requested order: Onam, Avasarama, Businessman
-    const onamProject = projects.find(p => p.title === 'Onam - Event');
-    const avasaramaProject = projects.find(p => p.title === 'Avasarama Ahankaarama - Independent Film');
+    // Get specific projects in the requested order: Businessman, Avasarama, Onam
     const businessmanProject = projects.find(p => p.title === 'Businessman Movie');
+    const avasaramaProject = projects.find(p => p.title === 'Avasarama Ahankaarama - Independent Film');
+    const onamProject = projects.find(p => p.title === 'Onam - Event');
     
-    const orderedProjects = [onamProject, avasaramaProject, businessmanProject].filter(Boolean);
+    const orderedProjects = [businessmanProject, avasaramaProject, onamProject].filter(Boolean);
     
     return orderedProjects.map((project, index) => ({
       title: project.title,
