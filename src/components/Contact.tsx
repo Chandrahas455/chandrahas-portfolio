@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, Linkedin } from 'lucide-react';
@@ -26,15 +25,14 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // You'll need to replace these with your actual EmailJS credentials
       const result = await emailjs.send(
         'service_i5opaph', // Your EmailJS service ID
         'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
         {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_email: 'chigullapallichandrahas@gmail.com', // Your email
+          to_email: 'chigullapallichandrahas@gmail.com',
+          client_name: formData.name,
+          client_email: formData.email,
+          client_message: formData.message,
         },
         'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
       );
