@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FloatingShapes } from './ui/floating-shapes';
@@ -63,15 +64,31 @@ const Hero = () => {
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-black leading-tight"
           >
             Hi, I'm <br />
-            <span className="relative">
+            <motion.span 
+              className="relative cursor-pointer group"
+              whileHover={{ 
+                scale: 1.05,
+                color: "#4f46e5",
+                transition: { duration: 0.3 }
+              }}
+            >
               Chandrahas Chigullapalli
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
                 transition={{ duration: 1, delay: 1.5 }}
-                className="absolute bottom-2 left-0 h-1 bg-black"
+                className="absolute bottom-2 left-0 h-1 bg-black group-hover:bg-indigo-600 transition-colors duration-300"
               />
-            </span>
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                whileHover={{ 
+                  opacity: 1, 
+                  scale: 1,
+                  transition: { duration: 0.2 }
+                }}
+                className="absolute -inset-2 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 blur-xl rounded-lg"
+              />
+            </motion.span>
           </motion.h1>
 
           <motion.p
