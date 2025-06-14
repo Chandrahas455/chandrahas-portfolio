@@ -29,7 +29,7 @@ const Portfolio = () => {
       id: 2,
       title: 'Saripodha Sanivaaram Movie',
       category: 'fanart',
-      description: 'Creative poster interpretation for the movie',
+      description: 'Creative poster for the movie',
       image: '/lovable-uploads/f6d0edf5-abcf-47f5-99cc-265fc79554a8.png',
       tools: ['Photoshop', 'After Effects']
     },
@@ -37,7 +37,7 @@ const Portfolio = () => {
       id: 3,
       title: 'Jennifer Lopez Sketch Song',
       category: 'fanart',
-      description: 'Artistic sketch design for the song',
+      description: 'Artistic sketch for the song',
       image: '/lovable-uploads/55479121-de2b-48c5-8fd6-331de8661ec4.png',
       tools: ['Photoshop', 'Illustrator']
     },
@@ -45,7 +45,7 @@ const Portfolio = () => {
       id: 4,
       title: 'Double Engine Movie',
       category: 'fanart',
-      description: 'Cinematic poster design for the film',
+      description: 'Cinematic poster for the film',
       image: '/lovable-uploads/2d535abc-951b-4122-8428-55753dcfb4a8.png',
       tools: ['Photoshop', 'Cinema 4D']
     },
@@ -53,7 +53,7 @@ const Portfolio = () => {
       id: 5,
       title: 'Okkadu Movie',
       category: 'fanart',
-      description: 'Atmospheric poster with night sky composition',
+      description: 'Atmospheric poster design',
       image: '/lovable-uploads/d62b8490-8d88-4d21-aab7-52d2cf596b54.png',
       tools: ['Photoshop', 'Illustrator']
     },
@@ -61,7 +61,7 @@ const Portfolio = () => {
       id: 6,
       title: 'IPL Fanart',
       category: 'fanart',
-      description: 'Creative IPL-themed artwork collection',
+      description: 'Creative IPL-themed artwork',
       image: '/lovable-uploads/a734c8d8-ea49-43fc-a4bd-7f629785202d.png',
       gallery: [
         '/lovable-uploads/a734c8d8-ea49-43fc-a4bd-7f629785202d.png',
@@ -74,7 +74,7 @@ const Portfolio = () => {
       id: 7,
       title: 'Avasarama Ahankaarama - Independent Film',
       category: 'posters',
-      description: 'Poster campaign for independent Telugu film',
+      description: 'Poster campaign for independent film',
       image: '/lovable-uploads/36cd6122-4c97-488d-a0e1-493d7a567469.png',
       gallery: [
         '/lovable-uploads/36cd6122-4c97-488d-a0e1-493d7a567469.png',
@@ -89,7 +89,7 @@ const Portfolio = () => {
       id: 8,
       title: 'Anthe - Shortfilm',
       category: 'posters',
-      description: 'Poster series for independent short film',
+      description: 'Poster series for short film',
       image: '/lovable-uploads/fc689b67-098d-41ce-880c-f2504727bc08.png',
       gallery: [
         '/lovable-uploads/fc689b67-098d-41ce-880c-f2504727bc08.png',
@@ -103,7 +103,7 @@ const Portfolio = () => {
       id: 9,
       title: 'Society Housefull - Shortfilm',
       category: 'posters',
-      description: 'Poster series for social commentary short film',
+      description: 'Poster series for social commentary film',
       image: '/lovable-uploads/3e2c8d49-7880-4dfb-a3b8-419fc5d659b6.png',
       gallery: [
         '/lovable-uploads/3e2c8d49-7880-4dfb-a3b8-419fc5d659b6.png',
@@ -148,6 +148,18 @@ const Portfolio = () => {
         '/lovable-uploads/4940a8fe-3215-44c1-94e9-db1ec041cd2c.png'
       ],
       tools: ['Photoshop', 'Illustrator', 'Typography', 'Social Media Design']
+    },
+    {
+      id: 14,
+      title: 'Onam - Event',
+      category: 'social',
+      description: 'Festival celebration event promotion',
+      image: '/lovable-uploads/d2998c71-9d75-46d0-9cb0-3a0a61362c31.png',
+      gallery: [
+        '/lovable-uploads/d2998c71-9d75-46d0-9cb0-3a0a61362c31.png',
+        '/lovable-uploads/295a2739-ebaa-41a5-9d17-7b8341d65384.png'
+      ],
+      tools: ['Photoshop', 'Digital Art', 'Event Design', 'Social Media']
     }
   ];
 
