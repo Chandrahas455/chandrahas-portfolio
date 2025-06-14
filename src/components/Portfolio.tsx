@@ -57,6 +57,19 @@ const Portfolio = () => {
     },
     {
       id: 6,
+      title: 'IPL Fanart',
+      category: 'fanart',
+      description: 'Creative IPL-themed artwork featuring dramatic compositions with eagles, timepieces, and warrior elements',
+      image: '/lovable-uploads/a734c8d8-ea49-43fc-a4bd-7f629785202d.png',
+      gallery: [
+        '/lovable-uploads/a734c8d8-ea49-43fc-a4bd-7f629785202d.png',
+        '/lovable-uploads/ea3b228c-c13e-438f-9f89-ec5f30946ad3.png',
+        '/lovable-uploads/f448c1e7-ad49-4bf4-9d26-a0b61aff974a.png'
+      ],
+      tools: ['Photoshop', 'Digital Art', 'Compositing']
+    },
+    {
+      id: 7,
       title: 'Echo Campaign',
       category: 'posters',
       description: 'A bold poster series exploring sound visualization',
@@ -64,7 +77,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Illustrator']
     },
     {
-      id: 7,
+      id: 8,
       title: 'YouTube Series Thumbnails',
       category: 'thumbnails',
       description: 'Eye-catching thumbnails that increased CTR by 40%',
@@ -172,7 +185,7 @@ const Portfolio = () => {
                       whileHover={{ opacity: 1, scale: 1 }}
                       className="text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full"
                     >
-                      View Project
+                      {project.gallery ? `View Gallery (${project.gallery.length})` : 'View Project'}
                     </motion.div>
                   </div>
                 </div>
