@@ -39,7 +39,6 @@ const Portfolio = () => {
       id: 3,
       title: 'Jennifer Lopez Sketch Song',
       category: 'fanart',
-      categories: ['featured', 'fanart'],
       description: 'Artistic sketch for the song',
       image: '/lovable-uploads/55479121-de2b-48c5-8fd6-331de8661ec4.png',
       tools: ['Photoshop', 'Illustrator']
@@ -177,10 +176,16 @@ const Portfolio = () => {
     setSelectedProject(null);
   };
 
-  // Create display cards for featured projects
+  // Create display cards for featured projects in specific order
   const createFeaturedCards = () => {
-    const featuredProjects = projects.filter(project => project.categories?.includes('featured')).slice(0, 3);
-    return featuredProjects.map((project, index) => ({
+    // Get specific projects in the requested order: Onam, Avasarama, Businessman
+    const onamProject = projects.find(p => p.title === 'Onam - Event');
+    const avasaramaProject = projects.find(p => p.title === 'Avasarama Ahankaarama - Independent Film');
+    const businessmanProject = projects.find(p => p.title === 'Businessman Movie');
+    
+    const orderedProjects = [onamProject, avasaramaProject, businessmanProject].filter(Boolean);
+    
+    return orderedProjects.map((project, index) => ({
       title: project.title,
       description: project.description,
       date: project.tools.join(', '),
