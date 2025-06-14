@@ -88,6 +88,20 @@ const Portfolio = () => {
     },
     {
       id: 8,
+      title: 'Anthe - Shortfilm',
+      category: 'posters',
+      description: 'Elegant poster series for an independent short film featuring milestone celebrations, romantic storytelling, and artistic visual compositions with sophisticated typography',
+      image: '/lovable-uploads/fc689b67-098d-41ce-880c-f2504727bc08.png',
+      gallery: [
+        '/lovable-uploads/fc689b67-098d-41ce-880c-f2504727bc08.png',
+        '/lovable-uploads/6ae0cf40-1af5-4dd2-a0c1-ba30791b0c93.png',
+        '/lovable-uploads/f7f90f4a-0e9d-4e8c-a3ae-b8a7c6c67177.png',
+        '/lovable-uploads/85d5b3ab-2051-4094-ad81-04edc6d8bee1.png'
+      ],
+      tools: ['Photoshop', 'Typography', 'Color Grading', 'Compositing']
+    },
+    {
+      id: 9,
       title: 'Echo Campaign',
       category: 'posters',
       description: 'A bold poster series exploring sound visualization',
@@ -95,7 +109,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Illustrator']
     },
     {
-      id: 9,
+      id: 10,
       title: 'YouTube Series Thumbnails',
       category: 'thumbnails',
       description: 'Eye-catching thumbnails that increased CTR by 40%',
