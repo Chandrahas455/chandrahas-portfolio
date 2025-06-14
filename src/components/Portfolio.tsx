@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { StarBorder } from './ui/star-border';
 
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -86,7 +87,7 @@ const Portfolio = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.25, 0.25, 0.75]
+        ease: "easeOut"
       }
     }
   };
@@ -118,19 +119,24 @@ const Portfolio = () => {
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
-            <motion.button
+            <motion.div
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
-                selectedCategory === category.id
-                  ? 'bg-black text-white'
-                  : 'bg-gray-100 text-black hover:bg-gray-200'
-              }`}
             >
-              {category.name}
-            </motion.button>
+              <StarBorder
+                as="button"
+                onClick={() => setSelectedCategory(category.id)}
+                className={`font-medium transition-all duration-200 ${
+                  selectedCategory === category.id
+                    ? 'text-black'
+                    : 'text-gray-600 hover:text-black'
+                }`}
+                color={selectedCategory === category.id ? "hsl(0, 0%, 0%)" : "hsl(0, 0%, 50%)"}
+              >
+                {category.name}
+              </StarBorder>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -147,7 +153,7 @@ const Portfolio = () => {
               variants={itemVariants}
               className="group cursor-pointer"
             >
-              <div className="relative overflow-hidden rounded-xl border-2 border-gray-200 bg-white shadow-sm hover:shadow-lg hover:border-black/20 transition-all duration-300">
+              <div className="relative overflow-hidden rounded-2xl border-2 border-gray-200 bg-white shadow-lg hover:shadow-xl hover:border-black/20 transition-all duration-300">
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <img
                     src={project.image}

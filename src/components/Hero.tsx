@@ -10,7 +10,7 @@ const Hero = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.25, 0.25, 0.25, 0.75]
+        ease: "easeOut"
       }
     }
   };
@@ -22,7 +22,7 @@ const Hero = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.25, 0.25, 0.75]
+        ease: "easeOut"
       }
     }
   };
@@ -34,7 +34,7 @@ const Hero = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.25, 0.25, 0.75]
+        ease: "easeOut"
       }
     }
   };
@@ -46,7 +46,7 @@ const Hero = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.25, 0.25, 0.75]
+        ease: "easeOut"
       }
     }
   };
