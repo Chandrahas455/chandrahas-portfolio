@@ -30,28 +30,32 @@ function DisplayCard({
   return (
     <div
       className={cn(
-        "relative flex h-36 w-[22rem] -skew-y-[8deg] select-none flex-col justify-between rounded-xl border-2 bg-muted/70 backdrop-blur-sm px-4 py-3 transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[20rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] hover:border-white/20 hover:bg-muted [&>*]:flex [&>*]:items-center [&>*]:gap-2 overflow-hidden",
+        "relative flex h-80 w-[22rem] -skew-y-[8deg] select-none flex-col rounded-xl border-2 bg-muted/70 backdrop-blur-sm p-4 transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[20rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] hover:border-white/20 hover:bg-muted overflow-hidden",
         className
       )}
       onClick={onClick}
     >
-      {image && (
-        <div className="absolute inset-0 opacity-20 hover:opacity-30 transition-opacity duration-700">
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover rounded-xl"
-          />
-        </div>
-      )}
-      <div className="relative z-10">
+      <div className="relative z-10 flex items-center gap-2 mb-3">
         <span className="relative inline-block rounded-full bg-blue-800 p-1">
           {icon}
         </span>
         <p className={cn("text-lg font-medium", titleClassName)}>{title}</p>
       </div>
-      <p className="whitespace-nowrap text-lg relative z-10">{description}</p>
-      <p className="text-muted-foreground relative z-10">{date}</p>
+      
+      {image && (
+        <div className="relative z-10 flex-1 mb-3 rounded-lg overflow-hidden">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
+      
+      <div className="relative z-10 space-y-2">
+        <p className="text-sm text-gray-700">{description}</p>
+        <p className="text-xs text-muted-foreground">{date}</p>
+      </div>
     </div>
   );
 }
