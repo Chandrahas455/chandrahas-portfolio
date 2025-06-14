@@ -136,6 +136,19 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Digital Art', 'Compositing', 'Typography']
     },
     {
+      id: 12,
+      title: 'Strike 4 - Series',
+      category: 'posters',
+      description: 'Intense poster series for action thriller web series featuring dramatic weapon imagery',
+      image: '/lovable-uploads/1cd9c56a-b8ba-48e8-b8cf-5b086617c2b1.png',
+      gallery: [
+        '/lovable-uploads/1cd9c56a-b8ba-48e8-b8cf-5b086617c2b1.png',
+        '/lovable-uploads/e6eded0d-deb7-45b7-a010-60388e1ae5ba.png',
+        '/lovable-uploads/77002782-a46b-4f84-8fa1-4181df4acaa0.png'
+      ],
+      tools: ['Photoshop', 'Digital Art', 'Compositing', 'Typography', 'Color Grading']
+    },
+    {
       id: 13,
       title: 'Anveshna Creatorship',
       category: 'social',
