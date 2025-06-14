@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Instagram, Linkedin } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -36,23 +36,13 @@ const Contact = () => {
   const socialLinks = [
     {
       name: 'Instagram',
-      url: 'https://instagram.com/chandrahas.design',
-      icon: 'IG'
-    },
-    {
-      name: 'Behance',
-      url: 'https://behance.net/chandrahas',
-      icon: 'BE'
-    },
-    {
-      name: 'Dribbble',
-      url: 'https://dribbble.com/chandrahas',
-      icon: 'DR'
+      url: 'https://www.instagram.com/chandrahaschigullapalli/',
+      icon: Instagram
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/chandrahas-chigullapalli',
-      icon: 'LI'
+      url: 'https://www.linkedin.com/in/chandrahas-chigullapalli-a2015b2a4',
+      icon: Linkedin
     }
   ];
 
@@ -88,20 +78,20 @@ const Contact = () => {
               <div>
                 <h4 className="font-semibold text-lg mb-2">Email</h4>
                 <a 
-                  href="mailto:chandrahas@example.com"
+                  href="mailto:chigullapallichandrahas@gmail.com"
                   className="text-gray-300 hover:text-white transition-colors text-lg"
                 >
-                  chandrahas@example.com
+                  chigullapallichandrahas@gmail.com
                 </a>
               </div>
               
               <div>
                 <h4 className="font-semibold text-lg mb-2">Phone</h4>
                 <a 
-                  href="tel:+1234567890"
+                  href="tel:+919542794261"
                   className="text-gray-300 hover:text-white transition-colors text-lg"
                 >
-                  +1 (234) 567-8900
+                  +91 9542794261
                 </a>
               </div>
             </div>
@@ -109,22 +99,25 @@ const Contact = () => {
             <div>
               <h4 className="font-semibold text-lg mb-6">Follow My Work</h4>
               <div className="flex gap-4">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    viewport={{ once: true }}
-                    className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center font-bold text-sm hover:bg-gray-200 transition-colors"
-                  >
-                    {social.icon}
-                  </motion.a>
-                ))}
+                {socialLinks.map((social, index) => {
+                  const IconComponent = social.icon;
+                  return (
+                    <motion.a
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1, duration: 0.5 }}
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      viewport={{ once: true }}
+                      className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+                    >
+                      <IconComponent size={20} />
+                    </motion.a>
+                  );
+                })}
               </div>
             </div>
           </motion.div>
