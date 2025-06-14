@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FloatingShapes } from './ui/floating-shapes';
@@ -68,7 +69,7 @@ const Hero = () => {
               className="relative cursor-pointer group"
               whileHover={{ 
                 scale: 1.05,
-                color: "#4f46e5",
+                color: "#eab308",
                 transition: { duration: 0.3 }
               }}
             >
@@ -77,7 +78,7 @@ const Hero = () => {
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
                 transition={{ duration: 1, delay: 1.5 }}
-                className="absolute bottom-2 left-0 h-1 bg-black group-hover:bg-indigo-600 transition-colors duration-300"
+                className="absolute bottom-2 left-0 h-1 bg-black group-hover:bg-yellow-500 transition-colors duration-300"
               />
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
@@ -86,7 +87,7 @@ const Hero = () => {
                   scale: 1,
                   transition: { duration: 0.2 }
                 }}
-                className="absolute -inset-2 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 blur-xl rounded-lg"
+                className="absolute -inset-2 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 blur-xl rounded-lg"
               />
             </motion.span>
           </motion.h1>
@@ -142,3 +143,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
