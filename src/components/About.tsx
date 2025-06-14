@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -36,9 +37,34 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold text-black mb-8">
-              About Me
-            </h2>
+            <motion.h2
+              className="text-4xl md:text-6xl font-bold text-black mb-8 relative cursor-pointer group"
+              whileHover={{ 
+                scale: 1.05,
+                color: "#eab308",
+                transition: { duration: 0.3 }
+              }}
+            >
+              <motion.span className="relative">
+                About Me
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: '100%' }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                  viewport={{ once: true }}
+                  className="absolute bottom-2 left-0 h-1 bg-black group-hover:bg-yellow-500 transition-colors duration-300"
+                />
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileHover={{ 
+                    opacity: 1, 
+                    scale: 1,
+                    transition: { duration: 0.2 }
+                  }}
+                  className="absolute -inset-2 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 blur-xl rounded-lg"
+                />
+              </motion.span>
+            </motion.h2>
             
             <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
               <p>
