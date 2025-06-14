@@ -21,7 +21,8 @@ const Portfolio = () => {
     {
       id: 1,
       title: 'Businessman Movie',
-      category: 'featured',
+      category: 'fanart',
+      categories: ['featured', 'fanart'],
       description: 'An alternative poster for Businessman',
       image: '/lovable-uploads/1f8780db-b1e2-4fae-a41e-87be65ff13af.png',
       tools: ['Photoshop', 'Illustrator']
@@ -29,7 +30,7 @@ const Portfolio = () => {
     {
       id: 2,
       title: 'Saripodha Sanivaaram Movie',
-      category: 'featured',
+      category: 'fanart',
       description: 'Creative poster for the movie',
       image: '/lovable-uploads/f6d0edf5-abcf-47f5-99cc-265fc79554a8.png',
       tools: ['Photoshop', 'After Effects']
@@ -38,6 +39,7 @@ const Portfolio = () => {
       id: 3,
       title: 'Jennifer Lopez Sketch Song',
       category: 'fanart',
+      categories: ['featured', 'fanart'],
       description: 'Artistic sketch for the song',
       image: '/lovable-uploads/55479121-de2b-48c5-8fd6-331de8661ec4.png',
       tools: ['Photoshop', 'Illustrator']
@@ -61,7 +63,7 @@ const Portfolio = () => {
     {
       id: 6,
       title: 'IPL Fanart',
-      category: 'featured',
+      category: 'fanart',
       description: 'Creative IPL-themed artwork',
       image: '/lovable-uploads/a734c8d8-ea49-43fc-a4bd-7f629785202d.png',
       gallery: [
@@ -75,6 +77,7 @@ const Portfolio = () => {
       id: 7,
       title: 'Avasarama Ahankaarama - Independent Film',
       category: 'posters',
+      categories: ['featured', 'posters'],
       description: 'Poster campaign for independent film',
       image: '/lovable-uploads/36cd6122-4c97-488d-a0e1-493d7a567469.png',
       gallery: [
@@ -146,6 +149,7 @@ const Portfolio = () => {
       id: 14,
       title: 'Onam - Event',
       category: 'social',
+      categories: ['featured', 'social'],
       description: 'Festival celebration event promotion',
       image: '/lovable-uploads/d2998c71-9d75-46d0-9cb0-3a0a61362c31.png',
       gallery: [
@@ -156,7 +160,12 @@ const Portfolio = () => {
     }
   ];
 
-  const filteredProjects = projects.filter(project => project.category === selectedCategory);
+  const filteredProjects = projects.filter(project => {
+    if (selectedCategory === 'featured') {
+      return project.categories?.includes('featured');
+    }
+    return project.category === selectedCategory || project.categories?.includes(selectedCategory);
+  });
 
   const handleProjectClick = (project: any) => {
     setSelectedProject(project);
@@ -170,7 +179,7 @@ const Portfolio = () => {
 
   // Create display cards for featured projects
   const createFeaturedCards = () => {
-    const featuredProjects = projects.filter(project => project.category === 'featured').slice(0, 3);
+    const featuredProjects = projects.filter(project => project.categories?.includes('featured')).slice(0, 3);
     return featuredProjects.map((project, index) => ({
       title: project.title,
       description: project.description,
