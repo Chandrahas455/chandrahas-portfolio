@@ -12,10 +12,10 @@ const About = () => {
       avatar: '/placeholder.svg'
     },
     {
-      name: 'Mike Chen',
-      role: 'Content Creator',
-      company: '@MikeCreates',
-      quote: 'Working together has elevated my content to a whole new level. The designs are always on-brand and visually stunning.',
+      name: 'Supreme Talkies',
+      role: 'Independent Filmmakers',
+      company: '',
+      quote: 'What ever reach our video has got, I\'ll give 50% of the credits to Chandrahas. Great Talent!!',
       avatar: '/placeholder.svg'
     },
     {
