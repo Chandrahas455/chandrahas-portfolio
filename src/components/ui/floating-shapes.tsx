@@ -22,13 +22,13 @@ export function FloatingShapes() {
   ];
 
   const renderShape = (shape: any, index: number) => {
-    const baseClasses = "absolute opacity-10";
+    const baseClasses = "absolute opacity-20";
     
     if (shape.type === 'circle') {
       return (
         <motion.div
           key={index}
-          className={`${baseClasses} rounded-full bg-black`}
+          className={`${baseClasses} rounded-full border-2 border-black`}
           style={{
             width: shape.size,
             height: shape.size,
@@ -54,7 +54,7 @@ export function FloatingShapes() {
       return (
         <motion.div
           key={index}
-          className={`${baseClasses} bg-gray-800`}
+          className={`${baseClasses} border-2 border-gray-800`}
           style={{
             width: shape.size,
             height: shape.size,
@@ -88,7 +88,8 @@ export function FloatingShapes() {
             height: 0,
             borderLeft: `${shape.size / 2}px solid transparent`,
             borderRight: `${shape.size / 2}px solid transparent`,
-            borderBottom: `${shape.size}px solid rgba(0, 0, 0, 0.1)`,
+            borderBottom: `2px solid rgba(0, 0, 0, 0.2)`,
+            borderTop: `${shape.size}px solid transparent`,
           }}
           animate={{
             y: [0, -20, 0],
