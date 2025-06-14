@@ -13,6 +13,7 @@ interface DisplayCardProps {
   iconClassName?: string;
   titleClassName?: string;
   onClick?: () => void;
+  image?: string;
 }
 
 function DisplayCard({
@@ -24,23 +25,33 @@ function DisplayCard({
   iconClassName = "text-blue-500",
   titleClassName = "text-blue-500",
   onClick,
+  image,
 }: DisplayCardProps) {
   return (
     <div
       className={cn(
-        "relative flex h-36 w-[22rem] -skew-y-[8deg] select-none flex-col justify-between rounded-xl border-2 bg-muted/70 backdrop-blur-sm px-4 py-3 transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[20rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] hover:border-white/20 hover:bg-muted [&>*]:flex [&>*]:items-center [&>*]:gap-2",
+        "relative flex h-36 w-[22rem] -skew-y-[8deg] select-none flex-col justify-between rounded-xl border-2 bg-muted/70 backdrop-blur-sm px-4 py-3 transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[20rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] hover:border-white/20 hover:bg-muted [&>*]:flex [&>*]:items-center [&>*]:gap-2 overflow-hidden",
         className
       )}
       onClick={onClick}
     >
-      <div>
+      {image && (
+        <div className="absolute inset-0 opacity-20 hover:opacity-30 transition-opacity duration-700">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+      )}
+      <div className="relative z-10">
         <span className="relative inline-block rounded-full bg-blue-800 p-1">
           {icon}
         </span>
         <p className={cn("text-lg font-medium", titleClassName)}>{title}</p>
       </div>
-      <p className="whitespace-nowrap text-lg">{description}</p>
-      <p className="text-muted-foreground">{date}</p>
+      <p className="whitespace-nowrap text-lg relative z-10">{description}</p>
+      <p className="text-muted-foreground relative z-10">{date}</p>
     </div>
   );
 }

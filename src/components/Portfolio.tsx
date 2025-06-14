@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { StarBorder } from './ui/star-border';
@@ -176,6 +175,7 @@ const Portfolio = () => {
       title: project.title,
       description: project.description,
       date: project.tools.join(', '),
+      image: project.image,
       className: index === 0 
         ? "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 cursor-pointer"
         : index === 1
@@ -291,6 +291,7 @@ const Portfolio = () => {
                 title: card.title,
                 description: card.description,
                 date: card.date,
+                image: card.image,
                 className: card.className,
                 onClick: card.onClick
               }))} />
