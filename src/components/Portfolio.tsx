@@ -180,6 +180,18 @@ const Portfolio = () => {
         '/lovable-uploads/295a2739-ebaa-41a5-9d17-7b8341d65384.png'
       ],
       tools: ['Photoshop', 'Digital Art', 'Event Design', 'Social Media']
+    },
+    {
+      id: 16,
+      title: 'Nandotsav - Event',
+      category: 'social',
+      description: 'Traditional Krishna Janmashtami celebration event design featuring vibrant golden tones and cultural elements',
+      image: '/lovable-uploads/81b8112f-e84e-4b1f-9257-1cc2daf3e86b.png',
+      gallery: [
+        '/lovable-uploads/81b8112f-e84e-4b1f-9257-1cc2daf3e86b.png',
+        '/lovable-uploads/5684acf9-f7b4-4f49-a957-78302d08f187.png'
+      ],
+      tools: ['Photoshop', 'Digital Art', 'Event Design', 'Typography', 'Cultural Branding']
     }
   ];
 
