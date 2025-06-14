@@ -48,7 +48,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden pt-16">
       <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
         <motion.div
           initial="hidden"
@@ -104,7 +104,7 @@ const Hero = () => {
 
           <motion.div
             variants={scrollVariants}
-            className="pt-12"
+            className="pt-16"
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
