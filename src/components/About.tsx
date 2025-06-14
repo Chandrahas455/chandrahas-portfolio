@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 const About = () => {
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Marketing Director',
-      company: 'TechStart Inc.',
-      quote: 'The creative vision and attention to detail in every project is exceptional. Our brand campaigns have never looked better.',
+      name: 'Utsavam',
+      role: 'Movie Production Channel',
+      company: '',
+      quote: 'Chandrahas is the best designer we\'ve ever worked with! His thumbnails elevate our films to another level—sometimes they\'re even better than the films themselves! His creativity and skill consistently leave us in awe. A true artist who adds immense value to every project!',
       avatar: '/placeholder.svg'
     },
     {
@@ -101,7 +101,7 @@ const About = () => {
                       </div>
                       <div>
                         <p className="font-bold text-black text-sm">{testimonial.name}</p>
-                        <p className="text-gray-600 text-xs">{testimonial.role} • {testimonial.company}</p>
+                        <p className="text-gray-600 text-xs">{testimonial.role}{testimonial.company && ` • ${testimonial.company}`}</p>
                       </div>
                     </div>
                   </motion.div>
