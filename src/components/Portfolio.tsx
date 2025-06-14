@@ -4,12 +4,11 @@ import { StarBorder } from './ui/star-border';
 import ProjectModal from './ProjectModal';
 
 const Portfolio = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('fanart');
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const categories = [
-    { id: 'all', name: 'All Work' },
     { id: 'fanart', name: 'Creative Fanart' },
     { id: 'posters', name: 'Poster Campaigns' },
     { id: 'thumbnails', name: 'Thumbnails' },
@@ -139,9 +138,7 @@ const Portfolio = () => {
     }
   ];
 
-  const filteredProjects = selectedCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+  const filteredProjects = projects.filter(project => project.category === selectedCategory);
 
   const handleProjectClick = (project: any) => {
     setSelectedProject(project);
