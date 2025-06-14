@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { StarBorder } from './ui/star-border';
@@ -275,23 +274,10 @@ const Portfolio = () => {
                   </div>
                 </div>
                 
-                <div className="p-6 space-y-3">
+                <div className="p-6">
                   <h3 className="text-xl font-bold text-black group-hover:text-gray-600 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {project.tools.map((tool, index) => (
-                      <span
-                        key={index}
-                        className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-medium"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </div>
             </motion.div>
