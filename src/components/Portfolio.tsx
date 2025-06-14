@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { StarBorder } from './ui/star-border';
@@ -194,7 +195,7 @@ const Portfolio = () => {
               initial={{ width: 0 }}
               animate={{ width: '100%' }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="absolute bottom-2 left-0 h-1 bg-black group-hover:bg-yellow-500 transition-colors duration-300"
+              className="absolute bottom-0 left-0 h-1 bg-black group-hover:bg-yellow-500 transition-colors duration-300"
             />
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
