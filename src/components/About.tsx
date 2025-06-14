@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import TopographyBackground from './TopographyBackground';
 
 const About = () => {
   const skills = [
@@ -38,9 +37,8 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50 relative overflow-hidden">
-      <TopographyBackground />
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <section id="about" className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
