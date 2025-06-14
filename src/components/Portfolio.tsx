@@ -102,6 +102,19 @@ const Portfolio = () => {
     },
     {
       id: 9,
+      title: 'Society Housefull - Shortfilm',
+      category: 'posters',
+      description: 'Dramatic poster series for a social commentary short film featuring bold typography, striking visual metaphors, and powerful storytelling through compelling imagery',
+      image: '/lovable-uploads/3e2c8d49-7880-4dfb-a3b8-419fc5d659b6.png',
+      gallery: [
+        '/lovable-uploads/3e2c8d49-7880-4dfb-a3b8-419fc5d659b6.png',
+        '/lovable-uploads/f17d265d-128c-4d54-bc76-3b6fc04ed93d.png',
+        '/lovable-uploads/e9663f6c-b639-4e21-bcf3-94abdf00de3a.png'
+      ],
+      tools: ['Photoshop', 'Typography', 'Digital Art', 'Compositing']
+    },
+    {
+      id: 10,
       title: 'Echo Campaign',
       category: 'posters',
       description: 'A bold poster series exploring sound visualization',
@@ -109,7 +122,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Illustrator']
     },
     {
-      id: 10,
+      id: 11,
       title: 'YouTube Series Thumbnails',
       category: 'thumbnails',
       description: 'Eye-catching thumbnails that increased CTR by 40%',
