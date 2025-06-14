@@ -181,9 +181,31 @@ const Portfolio = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-black mb-6">
-            Selected Work
-          </h2>
+          <motion.h2 
+            className="text-4xl md:text-6xl font-bold text-black mb-6 relative cursor-pointer group inline-block"
+            whileHover={{ 
+              scale: 1.05,
+              color: "#eab308",
+              transition: { duration: 0.3 }
+            }}
+          >
+            Showcase
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: '100%' }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="absolute bottom-2 left-0 h-1 bg-black group-hover:bg-yellow-500 transition-colors duration-300"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileHover={{ 
+                opacity: 1, 
+                scale: 1,
+                transition: { duration: 0.2 }
+              }}
+              className="absolute -inset-2 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 blur-xl rounded-lg"
+            />
+          </motion.h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             A curated collection of projects showcasing visual storytelling 
             and creative problem-solving across multiple disciplines
