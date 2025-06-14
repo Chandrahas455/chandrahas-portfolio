@@ -48,7 +48,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden pt-16">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden pt-32">
       <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
         <motion.div
           initial="hidden"
