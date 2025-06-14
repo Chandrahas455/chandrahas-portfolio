@@ -10,7 +10,6 @@ const Portfolio = () => {
 
   const categories = [
     { id: 'posters', name: 'Poster Campaigns' },
-    { id: 'thumbnails', name: 'Thumbnails' },
     { id: 'social', name: 'Social Media' },
     { id: 'logos', name: 'Logo Design' },
     { id: 'fanart', name: 'Creative Fanart' }
@@ -127,14 +126,6 @@ const Portfolio = () => {
       description: 'Bold poster series exploring sound visualization',
       image: 'https://images.unsplash.com/photo-1493932484895-752d1471eab5?w=500&h=600&fit=crop',
       tools: ['Photoshop', 'Illustrator']
-    },
-    {
-      id: 12,
-      title: 'YouTube Series Thumbnails',
-      category: 'thumbnails',
-      description: 'Eye-catching thumbnails that increased CTR by 40%',
-      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=500&h=600&fit=crop',
-      tools: ['Photoshop', 'Canva']
     },
     {
       id: 13,
