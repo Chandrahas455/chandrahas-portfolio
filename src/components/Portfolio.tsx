@@ -200,6 +200,21 @@ const Portfolio = () => {
         '/lovable-uploads/5684acf9-f7b4-4f49-a957-78302d08f187.png'
       ],
       tools: ['Photoshop', 'Digital Art', 'Event Design', 'Typography', 'Cultural Branding']
+    },
+    {
+      id: 18,
+      title: 'Pramana - Event',
+      category: 'social',
+      description: 'Multi-day cultural event featuring live music performances with diverse artists including Elyzium Band, Harika Narayan, Lost Stories, Sreerama Chandra and auditions',
+      image: '/lovable-uploads/c90e2439-e65e-4c7a-a110-73d727def84d.png',
+      gallery: [
+        '/lovable-uploads/c90e2439-e65e-4c7a-a110-73d727def84d.png',
+        '/lovable-uploads/38be1f78-8547-4bf6-b388-81dfda2821d2.png',
+        '/lovable-uploads/8d9bd272-e0dd-45b1-b144-f6bc2ce48301.png',
+        '/lovable-uploads/6cbb59ab-22d7-4e25-a0d0-c1afbed20737.png',
+        '/lovable-uploads/1851fd77-bf79-46d9-9352-9d133f224a15.png'
+      ],
+      tools: ['Photoshop', 'Typography', 'Event Design', 'Social Media', 'Brand Identity', 'Digital Art']
     }
   ];
 
