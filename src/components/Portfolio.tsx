@@ -73,6 +73,21 @@ const Portfolio = () => {
     },
     {
       id: 7,
+      title: 'Avasarama Ahankaarama - Independent Film',
+      category: 'posters',
+      description: 'Comprehensive poster campaign for a zero-budget independent Telugu film featuring vibrant branding, character showcases, and milestone celebration designs',
+      image: '/lovable-uploads/36cd6122-4c97-488d-a0e1-493d7a567469.png',
+      gallery: [
+        '/lovable-uploads/36cd6122-4c97-488d-a0e1-493d7a567469.png',
+        '/lovable-uploads/7d525526-eba4-4047-9b31-5a85c157c4fa.png',
+        '/lovable-uploads/8535b2c7-1bbe-40df-b283-f23bc425a095.png',
+        '/lovable-uploads/3cb53bb6-b876-4aca-b5d6-891b9ae908a7.png',
+        '/lovable-uploads/51be2a4f-4c2c-4748-872a-40879d030ea2.png'
+      ],
+      tools: ['Photoshop', 'Illustrator', 'Typography', 'Branding']
+    },
+    {
+      id: 8,
       title: 'Echo Campaign',
       category: 'posters',
       description: 'A bold poster series exploring sound visualization',
@@ -80,7 +95,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Illustrator']
     },
     {
-      id: 8,
+      id: 9,
       title: 'YouTube Series Thumbnails',
       category: 'thumbnails',
       description: 'Eye-catching thumbnails that increased CTR by 40%',
