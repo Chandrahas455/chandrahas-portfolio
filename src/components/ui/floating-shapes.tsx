@@ -36,7 +36,7 @@ export function FloatingShapes() {
   ];
 
   const renderShape = (shape: any, index: number) => {
-    const baseClasses = "absolute opacity-15";
+    const baseClasses = "absolute opacity-10";
     const animationDelay = index * 0.3;
     
     if (shape.type === 'circle') {
