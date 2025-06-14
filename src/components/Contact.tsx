@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, Linkedin } from 'lucide-react';
@@ -27,14 +28,14 @@ const Contact = () => {
     try {
       const result = await emailjs.send(
         'service_i5opaph', // Your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'template_fhcolr2', // Your EmailJS template ID
         {
           to_email: 'chigullapallichandrahas@gmail.com',
           client_name: formData.name,
           client_email: formData.email,
           client_message: formData.message,
         },
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        'Z2UQ5uA7KGspJ__uV' // Your EmailJS public key
       );
 
       console.log('Email sent successfully:', result);
