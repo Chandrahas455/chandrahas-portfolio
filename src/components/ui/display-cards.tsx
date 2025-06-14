@@ -1,4 +1,3 @@
-
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -43,11 +42,11 @@ function DisplayCard({
       </div>
       
       {image && (
-        <div className="relative z-10 flex-1 mb-3 rounded-lg overflow-hidden">
+        <div className="relative z-10 flex-1 mb-3 rounded-lg overflow-hidden aspect-[4/5]">
           <img
             src={image}
             alt={title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
         </div>
       )}
