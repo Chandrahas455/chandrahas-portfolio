@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { StarBorder } from './ui/star-border';
@@ -131,6 +130,14 @@ const Portfolio = () => {
       description: 'Bold poster series exploring sound visualization',
       image: 'https://images.unsplash.com/photo-1493932484895-752d1471eab5?w=500&h=600&fit=crop',
       tools: ['Photoshop', 'Illustrator']
+    },
+    {
+      id: 12,
+      title: 'Anveshna Creatorship',
+      category: 'social',
+      description: 'Creative recruitment campaign design with striking animal imagery',
+      image: '/lovable-uploads/165002ef-78d3-4be3-ade4-e1b61cf9ef86.png',
+      tools: ['Photoshop', 'Typography', 'Digital Art', 'Compositing']
     },
     {
       id: 13,
