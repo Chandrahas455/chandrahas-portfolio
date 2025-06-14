@@ -13,7 +13,6 @@ const Portfolio = () => {
     { id: 'featured', name: 'Featured' },
     { id: 'posters', name: 'Poster Campaigns' },
     { id: 'social', name: 'Social Media' },
-    { id: 'logos', name: 'Logo Design' },
     { id: 'fanart', name: 'Creative Fanart' }
   ];
 
