@@ -90,6 +90,18 @@ const Portfolio = () => {
     },
     {
       id: 8,
+      title: 'Forever - Shortfilm',
+      category: 'posters',
+      description: 'Emotional poster series for musical short film exploring themes of permanence and love',
+      image: '/lovable-uploads/0420724f-fa68-47dd-9da0-8823360ddd9f.png',
+      gallery: [
+        '/lovable-uploads/0420724f-fa68-47dd-9da0-8823360ddd9f.png',
+        '/lovable-uploads/c030711b-a6b7-4047-8794-c6c220b4d0d5.png'
+      ],
+      tools: ['Photoshop', 'Typography', 'Digital Art', 'Compositing']
+    },
+    {
+      id: 9,
       title: 'Anthe - Shortfilm',
       category: 'posters',
       description: 'Poster series for short film',
@@ -103,7 +115,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Typography', 'Color Grading', 'Compositing']
     },
     {
-      id: 9,
+      id: 10,
       title: 'Society Housefull - Shortfilm',
       category: 'posters',
       description: 'Poster series for social commentary film',
@@ -116,7 +128,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Typography', 'Digital Art', 'Compositing']
     },
     {
-      id: 10,
+      id: 11,
       title: 'Pariksha - Shortfilm',
       category: 'posters',
       description: 'Atmospheric poster for educational drama',
@@ -124,7 +136,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Digital Art', 'Compositing', 'Typography']
     },
     {
-      id: 11,
+      id: 12,
       title: 'Echo Campaign',
       category: 'posters',
       description: 'Bold poster series exploring sound visualization',
@@ -132,7 +144,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Illustrator']
     },
     {
-      id: 12,
+      id: 13,
       title: 'Anveshna Creatorship',
       category: 'social',
       description: 'Creative recruitment campaign design with striking animal imagery',
@@ -140,7 +152,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Typography', 'Digital Art', 'Compositing']
     },
     {
-      id: 13,
+      id: 14,
       title: 'Festive Marketing',
       category: 'social',
       description: 'Creative festive marketing campaigns',
@@ -153,7 +165,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Illustrator', 'Typography', 'Social Media Design']
     },
     {
-      id: 14,
+      id: 15,
       title: 'Onam - Event',
       category: 'social',
       categories: ['featured', 'social'],
