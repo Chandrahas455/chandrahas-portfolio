@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -13,7 +12,7 @@ const TopographyBackground = () => {
   }));
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
       <svg
         className="absolute inset-0 w-full h-full"
         viewBox="0 0 1000 1000"

@@ -6,12 +6,10 @@ import Portfolio from '../components/Portfolio';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import TopographyBackground from '../components/TopographyBackground';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white relative">
-      <TopographyBackground />
       <Navigation />
       <Hero />
       <Portfolio />
