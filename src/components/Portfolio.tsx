@@ -136,14 +136,6 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Digital Art', 'Compositing', 'Typography']
     },
     {
-      id: 12,
-      title: 'Echo Campaign',
-      category: 'posters',
-      description: 'Bold poster series exploring sound visualization',
-      image: 'https://images.unsplash.com/photo-1493932484895-752d1471eab5?w=500&h=600&fit=crop',
-      tools: ['Photoshop', 'Illustrator']
-    },
-    {
       id: 13,
       title: 'Anveshna Creatorship',
       category: 'social',
