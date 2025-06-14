@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, Linkedin } from 'lucide-react';
-import { BackgroundPathsOverlay } from './ui/background-paths-overlay';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -49,9 +48,6 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-black text-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-30">
-        <BackgroundPathsOverlay />
-      </div>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

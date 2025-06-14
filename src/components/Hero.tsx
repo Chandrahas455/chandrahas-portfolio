@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BackgroundPathsOverlay } from './ui/background-paths-overlay';
 
 const Hero = () => {
   const textVariants = {
@@ -50,7 +49,6 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
-      <BackgroundPathsOverlay />
       <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
         <motion.div
           initial="hidden"

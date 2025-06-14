@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BackgroundPathsOverlay } from './ui/background-paths-overlay';
 
 const About = () => {
   const skills = [
@@ -39,7 +38,6 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 bg-gray-50 relative overflow-hidden">
-      <BackgroundPathsOverlay />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
