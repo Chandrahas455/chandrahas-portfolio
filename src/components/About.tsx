@@ -1,38 +1,29 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
-  const skills = [
-    'Adobe Photoshop',
-    'Adobe Illustrator',
-    'Adobe After Effects',
-    'Figma',
-    'Sketch',
-    'Procreate',
-    'Cinema 4D',
-    'Canva'
-  ];
-
-  const experience = [
+  const testimonials = [
     {
-      year: '2020',
-      title: 'Started Design Journey',
-      description: 'Began learning Adobe Creative Suite and design fundamentals'
+      name: 'Sarah Johnson',
+      role: 'Marketing Director',
+      company: 'TechStart Inc.',
+      quote: 'The creative vision and attention to detail in every project is exceptional. Our brand campaigns have never looked better.',
+      avatar: '/placeholder.svg'
     },
     {
-      year: '2021',
-      title: 'First Professional Projects',
-      description: 'Started working with local businesses and content creators'
+      name: 'Mike Chen',
+      role: 'Content Creator',
+      company: '@MikeCreates',
+      quote: 'Working together has elevated my content to a whole new level. The designs are always on-brand and visually stunning.',
+      avatar: '/placeholder.svg'
     },
     {
-      year: '2022',
-      title: 'Expanded Skill Set',
-      description: 'Added motion graphics and 3D design to portfolio'
-    },
-    {
-      year: '2024',
-      title: 'Design Specialist',
-      description: 'Now specializing in visual storytelling and brand identity'
+      name: 'Lisa Rodriguez',
+      role: 'Brand Manager',
+      company: 'Urban Collective',
+      quote: 'Professional, creative, and always delivers on time. The poster campaigns exceeded all our expectations.',
+      avatar: '/placeholder.svg'
     }
   ];
 
@@ -92,41 +83,26 @@ const About = () => {
             className="space-y-12"
           >
             <div>
-              <h3 className="text-2xl font-bold text-black mb-6">Tools & Skills</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {skills.map((skill, index) => (
+              <h3 className="text-2xl font-bold text-black mb-6">What Clients Say</h3>
+              <div className="space-y-6">
+                {testimonials.map((testimonial, index) => (
                   <motion.div
-                    key={skill}
+                    key={testimonial.name}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center font-medium text-gray-800"
-                  >
-                    {skill}
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-bold text-black mb-6">Journey</h3>
-              <div className="space-y-6">
-                {experience.map((item, index) => (
-                  <motion.div
-                    key={item.year}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.2, duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="flex gap-4"
+                    className="bg-white p-6 rounded-lg shadow-sm border border-gray-200"
                   >
-                    <div className="flex-shrink-0 w-16 h-16 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm">
-                      {item.year}
-                    </div>
-                    <div className="flex-grow">
-                      <h4 className="font-bold text-black mb-1">{item.title}</h4>
-                      <p className="text-gray-600 text-sm">{item.description}</p>
+                    <p className="text-gray-700 mb-4 italic">"{testimonial.quote}"</p>
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        {testimonial.name.split(' ').map(n => n[0]).join('')}
+                      </div>
+                      <div>
+                        <p className="font-bold text-black text-sm">{testimonial.name}</p>
+                        <p className="text-gray-600 text-xs">{testimonial.role} • {testimonial.company}</p>
+                      </div>
                     </div>
                   </motion.div>
                 ))}
