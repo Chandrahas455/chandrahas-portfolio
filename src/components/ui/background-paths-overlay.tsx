@@ -13,13 +13,13 @@ function FloatingPaths({ position }: { position: number }) {
         } ${343 - i * 6}C${616 - i * 5 * position} ${470 - i * 6} ${
             684 - i * 5 * position
         } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`,
-        width: 0.3 + i * 0.02,
+        width: 0.8 + i * 0.05,
     }));
 
     return (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <svg
-                className="w-full h-full text-black opacity-20"
+                className="w-full h-full"
                 viewBox="0 0 696 316"
                 fill="none"
             >
@@ -28,13 +28,13 @@ function FloatingPaths({ position }: { position: number }) {
                     <motion.path
                         key={path.id}
                         d={path.d}
-                        stroke="currentColor"
+                        stroke="#000000"
                         strokeWidth={path.width}
-                        strokeOpacity={0.03 + path.id * 0.002}
+                        strokeOpacity={0.08 + path.id * 0.01}
                         initial={{ pathLength: 0.2 }}
                         animate={{
                             pathLength: [0.2, 1, 0.2],
-                            opacity: [0.02, 0.05, 0.02],
+                            opacity: [0.1, 0.2, 0.1],
                         }}
                         transition={{
                             duration: 25 + Math.random() * 15,

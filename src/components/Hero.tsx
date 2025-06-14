@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BackgroundPathsOverlay } from './ui/background-paths-overlay';
@@ -102,19 +103,19 @@ const Hero = () => {
               Get In Touch
             </motion.a>
           </motion.div>
-        </motion.div>
 
-        <motion.div
-          variants={scrollVariants}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center text-black"
+            variants={scrollVariants}
+            className="pt-12"
           >
-            <span className="text-sm font-medium mb-2">Scroll Down</span>
-            <div className="w-0.5 h-8 bg-black"></div>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="flex flex-col items-center text-black"
+            >
+              <span className="text-sm font-medium mb-2">Scroll Down</span>
+              <div className="w-0.5 h-8 bg-black"></div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>
