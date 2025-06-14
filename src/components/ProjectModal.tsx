@@ -74,7 +74,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-2">Tools Used</h3>
+              <h3 className="text-lg font-semibold mb-2">Tags</h3>
               <div className="flex flex-wrap gap-2">
                 {project.tools.map((tool, index) => (
                   <span
