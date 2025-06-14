@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { StarBorder } from './ui/star-border';
@@ -136,6 +135,19 @@ const Portfolio = () => {
       description: 'Eye-catching thumbnails that increased CTR by 40%',
       image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=500&h=600&fit=crop',
       tools: ['Photoshop', 'Canva']
+    },
+    {
+      id: 13,
+      title: 'Festive Marketing',
+      category: 'social',
+      description: 'Creative festive marketing campaigns featuring Eid celebrations, sushi promotions, and Ugadi festival designs with engaging typography and cultural themes',
+      image: '/lovable-uploads/beec4505-b11b-4491-abe5-cbbadefe27e5.png',
+      gallery: [
+        '/lovable-uploads/beec4505-b11b-4491-abe5-cbbadefe27e5.png',
+        '/lovable-uploads/ac7e4aff-b90c-41e7-8293-2c75b3d9914b.png',
+        '/lovable-uploads/4940a8fe-3215-44c1-94e9-db1ec041cd2c.png'
+      ],
+      tools: ['Photoshop', 'Illustrator', 'Typography', 'Social Media Design']
     }
   ];
 
