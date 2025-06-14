@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -19,10 +18,10 @@ const About = () => {
       avatar: '/placeholder.svg'
     },
     {
-      name: 'Lisa Rodriguez',
-      role: 'Brand Manager',
-      company: 'Urban Collective',
-      quote: 'Professional, creative, and always delivers on time. The poster campaigns exceeded all our expectations.',
+      name: 'ThaniRex',
+      role: 'Youtuber',
+      company: '',
+      quote: 'Chandrahas is an exceptional designer whose talent is matched by his humility. Calm under pressure, he excels at tackling demanding projects, delivering high-quality work even under tight deadlines. His dedication, growth mindset, and infectious passion for design make him a standout. A true inspiration and the best designer I\'ve worked with!',
       avatar: '/placeholder.svg'
     }
   ];
