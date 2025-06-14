@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BackgroundPathsOverlay } from './ui/background-paths-overlay';
+import { FloatingShapes } from './ui/floating-shapes';
 
 const Hero = () => {
   const textVariants = {
@@ -49,9 +48,9 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden pt-32">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white overflow-hidden pt-32">
       {/* Animated Background */}
-      <BackgroundPathsOverlay />
+      <FloatingShapes />
       
       <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
         <motion.div
