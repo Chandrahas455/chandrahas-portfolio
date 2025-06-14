@@ -42,11 +42,11 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                 <CarouselContent>
                   {images.map((image, index) => (
                     <CarouselItem key={index}>
-                      <div className="aspect-[4/5] w-full overflow-hidden rounded-lg">
+                      <div className="w-full overflow-hidden rounded-lg flex justify-center">
                         <img
                           src={image}
                           alt={`${project.title} - Image ${index + 1}`}
-                          className="w-full h-full object-cover"
+                          className="max-w-full max-h-[60vh] object-contain"
                         />
                       </div>
                     </CarouselItem>
@@ -56,11 +56,11 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                 <CarouselNext className="right-4" />
               </Carousel>
             ) : (
-              <div className="aspect-[4/5] w-full overflow-hidden rounded-lg">
+              <div className="w-full overflow-hidden rounded-lg flex justify-center">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="max-w-full max-h-[60vh] object-contain"
                 />
               </div>
             )}
