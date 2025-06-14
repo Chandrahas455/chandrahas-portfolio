@@ -37,7 +37,7 @@ export function FloatingShapes() {
 
   const renderShape = (shape: any, index: number) => {
     const baseClasses = "absolute opacity-15";
-    const animationDelay = index * 0.5;
+    const animationDelay = index * 0.3;
     
     if (shape.type === 'circle') {
       return (
@@ -52,10 +52,10 @@ export function FloatingShapes() {
             animationDelay: `${animationDelay}s`,
           }}
           animate={{
-            y: [0, -40, 0],
-            x: [0, 20, 0],
-            rotate: [0, 180, 360],
-            scale: [1, 1.2, 1],
+            y: [0, -80, 0],
+            x: [0, 50, 0],
+            rotate: [0, 360, 720],
+            scale: [1, 1.8, 0.6, 1],
           }}
           transition={{
             duration: shape.duration,
@@ -80,10 +80,10 @@ export function FloatingShapes() {
             animationDelay: `${animationDelay}s`,
           }}
           animate={{
-            y: [0, 35, 0],
-            x: [0, -25, 0],
-            rotate: [0, 90, 180, 270, 360],
-            scale: [1, 0.7, 1.1, 1],
+            y: [0, 70, -30, 0],
+            x: [0, -60, 40, 0],
+            rotate: [0, 180, 360, 540, 720],
+            scale: [1, 0.4, 1.6, 0.8, 1],
           }}
           transition={{
             duration: shape.duration,
@@ -109,10 +109,10 @@ export function FloatingShapes() {
             animationDelay: `${animationDelay}s`,
           }}
           animate={{
-            y: [0, -30, 0],
-            x: [0, 15, 0],
-            rotate: [45, 225, 405],
-            scale: [1, 1.3, 1],
+            y: [0, -60, 40, 0],
+            x: [0, 30, -20, 0],
+            rotate: [45, 405, 765, 1125],
+            scale: [1, 2.0, 0.3, 1.4, 1],
           }}
           transition={{
             duration: shape.duration,
@@ -141,10 +141,10 @@ export function FloatingShapes() {
             animationDelay: `${animationDelay}s`,
           }}
           animate={{
-            y: [0, -25, 0],
-            x: [0, 12, 0],
-            rotate: [0, 120, 240, 360],
-            scale: [1, 1.4, 1],
+            y: [0, -50, 30, 0],
+            x: [0, 25, -35, 0],
+            rotate: [0, 240, 480, 720],
+            scale: [1, 2.2, 0.2, 1.5, 1],
           }}
           transition={{
             duration: shape.duration,
