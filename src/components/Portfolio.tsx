@@ -149,6 +149,14 @@ const Portfolio = () => {
     },
     {
       id: 13,
+      title: 'Ext Cinema',
+      category: 'posters',
+      description: 'Dramatic poster design featuring cinematic elements with elegant typography and atmospheric composition',
+      image: '/lovable-uploads/7aa62918-1e0b-488e-8e79-25b9a02e85e3.png',
+      tools: ['Photoshop', 'Typography', 'Digital Art', 'Compositing', 'Conceptual Design']
+    },
+    {
+      id: 14,
       title: 'Anveshna Creatorship',
       category: 'social',
       description: 'Creative recruitment campaign design with striking animal imagery',
@@ -156,7 +164,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Typography', 'Digital Art', 'Compositing']
     },
     {
-      id: 14,
+      id: 15,
       title: 'Festive Marketing',
       category: 'social',
       description: 'Creative festive marketing campaigns',
@@ -169,7 +177,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Illustrator', 'Typography', 'Social Media Design']
     },
     {
-      id: 15,
+      id: 16,
       title: 'Onam - Event',
       category: 'social',
       categories: ['featured', 'social'],
@@ -182,7 +190,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Digital Art', 'Event Design', 'Social Media']
     },
     {
-      id: 16,
+      id: 17,
       title: 'Nandotsav - Event',
       category: 'social',
       description: 'Traditional Krishna Janmashtami celebration event design featuring vibrant golden tones and cultural elements',
