@@ -115,6 +115,14 @@ const Portfolio = () => {
     },
     {
       id: 10,
+      title: 'Pariksha - Shortfilm',
+      category: 'posters',
+      description: 'Atmospheric poster design for an educational drama short film featuring creative visual metaphors with floating academic elements and dramatic lighting composition',
+      image: '/lovable-uploads/7f1653c5-95b8-4c2a-b592-ec2b65c4c937.png',
+      tools: ['Photoshop', 'Digital Art', 'Compositing', 'Typography']
+    },
+    {
+      id: 11,
       title: 'Echo Campaign',
       category: 'posters',
       description: 'A bold poster series exploring sound visualization',
@@ -122,7 +130,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Illustrator']
     },
     {
-      id: 11,
+      id: 12,
       title: 'YouTube Series Thumbnails',
       category: 'thumbnails',
       description: 'Eye-catching thumbnails that increased CTR by 40%',
