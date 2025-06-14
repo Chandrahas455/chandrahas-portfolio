@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, Linkedin } from 'lucide-react';
@@ -27,7 +28,7 @@ const Contact = () => {
     try {
       // You'll need to replace these with your actual EmailJS credentials
       const result = await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'service_i5opaph', // Your EmailJS service ID
         'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
         {
           from_name: formData.name,
