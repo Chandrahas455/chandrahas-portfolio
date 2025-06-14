@@ -21,7 +21,7 @@ const Portfolio = () => {
       id: 1,
       title: 'Businessman Movie',
       category: 'fanart',
-      description: 'Alternative movie poster design with bold typography and compelling visual storytelling',
+      description: 'An alternative poster for Businessman',
       image: '/lovable-uploads/1f8780db-b1e2-4fae-a41e-87be65ff13af.png',
       tools: ['Photoshop', 'Illustrator']
     },
@@ -29,7 +29,7 @@ const Portfolio = () => {
       id: 2,
       title: 'Saripodha Sanivaaram Movie',
       category: 'fanart',
-      description: 'Creative interpretation with dramatic composition and thematic design elements',
+      description: 'Creative poster interpretation for the movie',
       image: '/lovable-uploads/f6d0edf5-abcf-47f5-99cc-265fc79554a8.png',
       tools: ['Photoshop', 'After Effects']
     },
@@ -37,7 +37,7 @@ const Portfolio = () => {
       id: 3,
       title: 'Jennifer Lopez Sketch Song',
       category: 'fanart',
-      description: 'Artistic sketch design showcasing creative typography and visual composition',
+      description: 'Artistic sketch design for the song',
       image: '/lovable-uploads/55479121-de2b-48c5-8fd6-331de8661ec4.png',
       tools: ['Photoshop', 'Illustrator']
     },
@@ -45,7 +45,7 @@ const Portfolio = () => {
       id: 4,
       title: 'Double Engine Movie',
       category: 'fanart',
-      description: 'Cinematic poster design with strong visual narrative and atmospheric elements',
+      description: 'Cinematic poster design for the film',
       image: '/lovable-uploads/2d535abc-951b-4122-8428-55753dcfb4a8.png',
       tools: ['Photoshop', 'Cinema 4D']
     },
@@ -53,7 +53,7 @@ const Portfolio = () => {
       id: 5,
       title: 'Okkadu Movie',
       category: 'fanart',
-      description: 'Atmospheric movie poster featuring stunning night sky composition with mosque architecture',
+      description: 'Atmospheric poster with night sky composition',
       image: '/lovable-uploads/d62b8490-8d88-4d21-aab7-52d2cf596b54.png',
       tools: ['Photoshop', 'Illustrator']
     },
@@ -61,7 +61,7 @@ const Portfolio = () => {
       id: 6,
       title: 'IPL Fanart',
       category: 'fanart',
-      description: 'Creative IPL-themed artwork featuring dramatic compositions with eagles, timepieces, and warrior elements',
+      description: 'Creative IPL-themed artwork collection',
       image: '/lovable-uploads/a734c8d8-ea49-43fc-a4bd-7f629785202d.png',
       gallery: [
         '/lovable-uploads/a734c8d8-ea49-43fc-a4bd-7f629785202d.png',
@@ -74,7 +74,7 @@ const Portfolio = () => {
       id: 7,
       title: 'Avasarama Ahankaarama - Independent Film',
       category: 'posters',
-      description: 'Comprehensive poster campaign for a zero-budget independent Telugu film featuring vibrant branding, character showcases, and milestone celebration designs',
+      description: 'Poster campaign for independent Telugu film',
       image: '/lovable-uploads/36cd6122-4c97-488d-a0e1-493d7a567469.png',
       gallery: [
         '/lovable-uploads/36cd6122-4c97-488d-a0e1-493d7a567469.png',
@@ -89,7 +89,7 @@ const Portfolio = () => {
       id: 8,
       title: 'Anthe - Shortfilm',
       category: 'posters',
-      description: 'Elegant poster series for an independent short film featuring milestone celebrations, romantic storytelling, and artistic visual compositions with sophisticated typography',
+      description: 'Poster series for independent short film',
       image: '/lovable-uploads/fc689b67-098d-41ce-880c-f2504727bc08.png',
       gallery: [
         '/lovable-uploads/fc689b67-098d-41ce-880c-f2504727bc08.png',
@@ -103,7 +103,7 @@ const Portfolio = () => {
       id: 9,
       title: 'Society Housefull - Shortfilm',
       category: 'posters',
-      description: 'Dramatic poster series for a social commentary short film featuring bold typography, striking visual metaphors, and powerful storytelling through compelling imagery',
+      description: 'Poster series for social commentary short film',
       image: '/lovable-uploads/3e2c8d49-7880-4dfb-a3b8-419fc5d659b6.png',
       gallery: [
         '/lovable-uploads/3e2c8d49-7880-4dfb-a3b8-419fc5d659b6.png',
@@ -116,7 +116,7 @@ const Portfolio = () => {
       id: 10,
       title: 'Pariksha - Shortfilm',
       category: 'posters',
-      description: 'Atmospheric poster design for an educational drama short film featuring creative visual metaphors with floating academic elements and dramatic lighting composition',
+      description: 'Atmospheric poster for educational drama',
       image: '/lovable-uploads/7f1653c5-95b8-4c2a-b592-ec2b65c4c937.png',
       tools: ['Photoshop', 'Digital Art', 'Compositing', 'Typography']
     },
@@ -124,7 +124,7 @@ const Portfolio = () => {
       id: 11,
       title: 'Echo Campaign',
       category: 'posters',
-      description: 'A bold poster series exploring sound visualization',
+      description: 'Bold poster series exploring sound visualization',
       image: 'https://images.unsplash.com/photo-1493932484895-752d1471eab5?w=500&h=600&fit=crop',
       tools: ['Photoshop', 'Illustrator']
     },
@@ -140,7 +140,7 @@ const Portfolio = () => {
       id: 13,
       title: 'Festive Marketing',
       category: 'social',
-      description: 'Creative festive marketing campaigns featuring Eid celebrations, sushi promotions, and Ugadi festival designs with engaging typography and cultural themes',
+      description: 'Creative festive marketing campaigns',
       image: '/lovable-uploads/beec4505-b11b-4491-abe5-cbbadefe27e5.png',
       gallery: [
         '/lovable-uploads/beec4505-b11b-4491-abe5-cbbadefe27e5.png',
