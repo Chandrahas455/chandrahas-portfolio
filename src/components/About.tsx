@@ -62,16 +62,6 @@ const About = () => {
                 architecture to nature.
               </p>
             </div>
-            
-            <motion.a
-              href="/resume.pdf"
-              target="_blank"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block mt-8 bg-black text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-colors duration-200"
-            >
-              Download Resume
-            </motion.a>
           </motion.div>
           
           <motion.div
