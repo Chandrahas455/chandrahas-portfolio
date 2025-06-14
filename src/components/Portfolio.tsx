@@ -4,11 +4,12 @@ import { StarBorder } from './ui/star-border';
 import ProjectModal from './ProjectModal';
 
 const Portfolio = () => {
-  const [selectedCategory, setSelectedCategory] = useState('posters');
+  const [selectedCategory, setSelectedCategory] = useState('featured');
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const categories = [
+    { id: 'featured', name: 'Featured' },
     { id: 'posters', name: 'Poster Campaigns' },
     { id: 'social', name: 'Social Media' },
     { id: 'logos', name: 'Logo Design' },
@@ -19,7 +20,7 @@ const Portfolio = () => {
     {
       id: 1,
       title: 'Businessman Movie',
-      category: 'fanart',
+      category: 'featured',
       description: 'An alternative poster for Businessman',
       image: '/lovable-uploads/1f8780db-b1e2-4fae-a41e-87be65ff13af.png',
       tools: ['Photoshop', 'Illustrator']
@@ -27,7 +28,7 @@ const Portfolio = () => {
     {
       id: 2,
       title: 'Saripodha Sanivaaram Movie',
-      category: 'fanart',
+      category: 'featured',
       description: 'Creative poster for the movie',
       image: '/lovable-uploads/f6d0edf5-abcf-47f5-99cc-265fc79554a8.png',
       tools: ['Photoshop', 'After Effects']
@@ -59,7 +60,7 @@ const Portfolio = () => {
     {
       id: 6,
       title: 'IPL Fanart',
-      category: 'fanart',
+      category: 'featured',
       description: 'Creative IPL-themed artwork',
       image: '/lovable-uploads/a734c8d8-ea49-43fc-a4bd-7f629785202d.png',
       gallery: [
