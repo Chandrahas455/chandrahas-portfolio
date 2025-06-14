@@ -18,6 +18,38 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
+      title: 'Businessman Movie',
+      category: 'fanart',
+      description: 'Alternative movie poster design with bold typography and compelling visual storytelling',
+      image: '/lovable-uploads/1f8780db-b1e2-4fae-a41e-87be65ff13af.png',
+      tools: ['Photoshop', 'Illustrator']
+    },
+    {
+      id: 2,
+      title: 'Saripodha Sanivaaram Movie',
+      category: 'fanart',
+      description: 'Creative interpretation with dramatic composition and thematic design elements',
+      image: '/lovable-uploads/f6d0edf5-abcf-47f5-99cc-265fc79554a8.png',
+      tools: ['Photoshop', 'After Effects']
+    },
+    {
+      id: 3,
+      title: 'Jennifer Lopez Sketch Song',
+      category: 'fanart',
+      description: 'Artistic sketch design showcasing creative typography and visual composition',
+      image: '/lovable-uploads/55479121-de2b-48c5-8fd6-331de8661ec4.png',
+      tools: ['Photoshop', 'Illustrator']
+    },
+    {
+      id: 4,
+      title: 'Double Engine Movie',
+      category: 'fanart',
+      description: 'Cinematic poster design with strong visual narrative and atmospheric elements',
+      image: '/lovable-uploads/2d535abc-951b-4122-8428-55753dcfb4a8.png',
+      tools: ['Photoshop', 'Cinema 4D']
+    },
+    {
+      id: 5,
       title: 'Echo Campaign',
       category: 'posters',
       description: 'A bold poster series exploring sound visualization',
@@ -25,44 +57,12 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Illustrator']
     },
     {
-      id: 2,
-      title: 'Marvel Heroes Reimagined',
-      category: 'fanart',
-      description: 'Contemporary take on classic superhero designs',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=600&fit=crop',
-      tools: ['Photoshop', 'Procreate']
-    },
-    {
-      id: 3,
-      title: 'Tech Startup Brand',
-      category: 'logos',
-      description: 'Minimalist logo design for emerging tech company',
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=600&fit=crop',
-      tools: ['Illustrator', 'After Effects']
-    },
-    {
-      id: 4,
+      id: 6,
       title: 'YouTube Series Thumbnails',
       category: 'thumbnails',
       description: 'Eye-catching thumbnails that increased CTR by 40%',
       image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=500&h=600&fit=crop',
       tools: ['Photoshop', 'Canva']
-    },
-    {
-      id: 5,
-      title: 'Instagram Campaign',
-      category: 'social',
-      description: 'Cohesive social media design system',
-      image: 'https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=500&h=600&fit=crop',
-      tools: ['Photoshop', 'Figma']
-    },
-    {
-      id: 6,
-      title: 'Movie Poster Series',
-      category: 'posters',
-      description: 'Alternative movie posters with modern aesthetic',
-      image: 'https://images.unsplash.com/photo-1489599735734-79b4fc8fbb7a?w=500&h=600&fit=crop',
-      tools: ['Photoshop', 'Cinema 4D']
     }
   ];
 
