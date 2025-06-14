@@ -4,16 +4,16 @@ import { StarBorder } from './ui/star-border';
 import ProjectModal from './ProjectModal';
 
 const Portfolio = () => {
-  const [selectedCategory, setSelectedCategory] = useState('fanart');
+  const [selectedCategory, setSelectedCategory] = useState('posters');
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const categories = [
-    { id: 'fanart', name: 'Creative Fanart' },
     { id: 'posters', name: 'Poster Campaigns' },
     { id: 'thumbnails', name: 'Thumbnails' },
     { id: 'social', name: 'Social Media' },
-    { id: 'logos', name: 'Logo Design' }
+    { id: 'logos', name: 'Logo Design' },
+    { id: 'fanart', name: 'Creative Fanart' }
   ];
 
   const projects = [
