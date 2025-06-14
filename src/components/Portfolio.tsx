@@ -49,6 +49,14 @@ const Portfolio = () => {
     },
     {
       id: 5,
+      title: 'Okkadu Movie',
+      category: 'fanart',
+      description: 'Atmospheric movie poster featuring stunning night sky composition with mosque architecture',
+      image: '/lovable-uploads/d62b8490-8d88-4d21-aab7-52d2cf596b54.png',
+      tools: ['Photoshop', 'Illustrator']
+    },
+    {
+      id: 6,
       title: 'Echo Campaign',
       category: 'posters',
       description: 'A bold poster series exploring sound visualization',
@@ -56,7 +64,7 @@ const Portfolio = () => {
       tools: ['Photoshop', 'Illustrator']
     },
     {
-      id: 6,
+      id: 7,
       title: 'YouTube Series Thumbnails',
       category: 'thumbnails',
       description: 'Eye-catching thumbnails that increased CTR by 40%',
