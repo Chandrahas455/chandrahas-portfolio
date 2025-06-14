@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { StarBorder } from './ui/star-border';
+import ProjectModal from './ProjectModal';
 
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const categories = [
     { id: 'all', name: 'All Work' },
@@ -90,6 +93,16 @@ const Portfolio = () => {
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
 
+  const handleProjectClick = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -171,6 +184,7 @@ const Portfolio = () => {
               key={project.id}
               variants={itemVariants}
               className="group cursor-pointer"
+              onClick={() => handleProjectClick(project)}
             >
               <div className="relative overflow-hidden rounded-2xl border-2 border-gray-200 bg-white shadow-lg hover:shadow-xl hover:border-black/20 transition-all duration-300">
                 <div className="relative aspect-[4/5] overflow-hidden">
@@ -213,6 +227,12 @@ const Portfolio = () => {
           ))}
         </motion.div>
       </div>
+
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </section>
   );
 };
