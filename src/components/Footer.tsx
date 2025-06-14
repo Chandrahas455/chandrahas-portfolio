@@ -1,11 +1,12 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
+import { BackgroundPathsOverlay } from './ui/background-paths-overlay';
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-12 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="bg-white py-12 border-t border-gray-200 relative overflow-hidden">
+      <BackgroundPathsOverlay />
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
