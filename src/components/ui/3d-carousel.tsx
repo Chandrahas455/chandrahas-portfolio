@@ -1,4 +1,3 @@
-
 "use client"
 
 import { memo, useEffect, useLayoutEffect, useMemo, useState } from "react"
@@ -80,13 +79,11 @@ const Carousel = memo(
     const isScreenSizeSm = useMediaQuery("(max-width: 640px)")
     const faceCount = cards.length
     
-    // Calculate optimal face width based on screen size and ensure minimum width
-    const minFaceWidth = isScreenSizeSm ? 200 : 280
-    const maxFaceWidth = isScreenSizeSm ? 240 : 320
-    const faceWidth = Math.max(minFaceWidth, Math.min(maxFaceWidth, isScreenSizeSm ? 1100 / Math.max(faceCount, 4) : 1800 / Math.max(faceCount, 6)))
+    // Make cards smaller and more zoomed out for all categories
+    const faceWidth = isScreenSizeSm ? 180 : 240
     
-    // Calculate cylinder width based on optimal face width
-    const cylinderWidth = faceWidth * Math.max(faceCount, isScreenSizeSm ? 4 : 6)
+    // Calculate cylinder width to ensure proper spacing
+    const cylinderWidth = faceWidth * Math.max(faceCount, isScreenSizeSm ? 5 : 8)
     const radius = cylinderWidth / (2 * Math.PI)
     const rotation = useMotionValue(0)
     const transform = useTransform(
