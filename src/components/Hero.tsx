@@ -126,7 +126,10 @@ const Hero = () => {
                 color: "#eab308",
                 transition: { duration: 0.3 }
               }}
-              style={{ transform: 'translateZ(25px)' }}
+              style={{ 
+                transform: 'translateZ(25px)',
+                transformStyle: 'preserve-3d'
+              }}
             >
               Chandrahas Chigullapalli
               <motion.div
@@ -134,6 +137,7 @@ const Hero = () => {
                 animate={{ width: '100%' }}
                 transition={{ duration: 1, delay: 1.5 }}
                 className="absolute bottom-0 left-0 h-1 bg-black group-hover:bg-yellow-500 transition-colors duration-300"
+                style={{ transform: 'translateZ(-1px)' }}
               />
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
@@ -142,7 +146,8 @@ const Hero = () => {
                   scale: 1,
                   transition: { duration: 0.2 }
                 }}
-                className="absolute -inset-2 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 blur-xl rounded-lg pointer-events-none"
+                className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 blur-xl rounded-lg pointer-events-none"
+                style={{ transform: 'translateZ(-2px)' }}
               />
             </motion.span>
           </motion.h1>
