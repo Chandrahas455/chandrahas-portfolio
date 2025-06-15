@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FloatingShapes } from './ui/floating-shapes';
@@ -96,8 +94,7 @@ const Hero = () => {
             variants={subtitleVariants}
             className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto"
           >
-            Visual Designer & Storyteller with 4+ years of experience 
-            crafting compelling visual narratives through design
+            Visual Designer & Storyteller
           </motion.p>
 
           <motion.div
@@ -143,4 +140,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
