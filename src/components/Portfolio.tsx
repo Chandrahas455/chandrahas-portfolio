@@ -317,8 +317,7 @@ const Portfolio = () => {
             />
           </motion.h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            A curated collection of projects showcasing visual storytelling 
-            and creative problem-solving across multiple disciplines
+            A curated selection of visual stories told across different styles and formats.
           </p>
         </motion.div>
 
