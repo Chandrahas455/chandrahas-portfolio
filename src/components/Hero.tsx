@@ -132,8 +132,7 @@ const Hero = () => {
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
                 transition={{ duration: 1, delay: 1.5 }}
-                className="absolute bottom-2 left-0 right-0 h-1 bg-black group-hover:bg-yellow-500 transition-colors duration-300"
-                style={{ width: 'auto' }}
+                className="absolute bottom-2 left-0 h-1 bg-black group-hover:bg-yellow-500 transition-colors duration-300"
               />
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
