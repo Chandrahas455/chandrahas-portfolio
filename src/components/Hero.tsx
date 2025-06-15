@@ -15,8 +15,8 @@ const Hero = () => {
       const centerX = rect.left + rect.width / 2;
       const centerY = rect.top + rect.height / 2;
       
-      const rotateX = (e.clientY - centerY) / rect.height * -15; // Max 15 degrees
-      const rotateY = (e.clientX - centerX) / rect.width * 15; // Max 15 degrees
+      const rotateX = (e.clientY - centerY) / rect.height * -8; // Reduced from -15 for subtlety
+      const rotateY = (e.clientX - centerX) / rect.width * 8; // Reduced from 15 for subtlety
       
       setMousePosition({ x: rotateY, y: rotateX });
     };
@@ -98,7 +98,7 @@ const Hero = () => {
         style={{
           transform: `rotateX(${mousePosition.y}deg) rotateY(${mousePosition.x}deg)`,
           transformStyle: 'preserve-3d',
-          transition: 'transform 0.1s ease-out'
+          transition: 'transform 0.3s ease-out'
         }}
       >
         <motion.div
@@ -106,7 +106,7 @@ const Hero = () => {
           animate="visible"
           className="space-y-8"
           style={{
-            transform: 'translateZ(50px)',
+            transform: 'translateZ(30px)',
             transformStyle: 'preserve-3d'
           }}
         >
@@ -114,19 +114,19 @@ const Hero = () => {
             variants={textVariants}
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-black leading-tight"
             style={{ 
-              transform: 'translateZ(30px)',
+              transform: 'translateZ(20px)',
               textShadow: '0 5px 15px rgba(0,0,0,0.1)'
             }}
           >
             Hi, I'm <br />
             <motion.span 
-              className="relative cursor-pointer group"
+              className="relative cursor-pointer group inline-block"
               whileHover={{ 
                 scale: 1.05,
                 color: "#eab308",
                 transition: { duration: 0.3 }
               }}
-              style={{ transform: 'translateZ(40px)' }}
+              style={{ transform: 'translateZ(25px)' }}
             >
               Chandrahas Chigullapalli
               <motion.div
@@ -142,7 +142,7 @@ const Hero = () => {
                   scale: 1,
                   transition: { duration: 0.2 }
                 }}
-                className="absolute -inset-2 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 blur-xl rounded-lg"
+                className="absolute -inset-4 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 blur-xl rounded-lg pointer-events-none"
               />
             </motion.span>
           </motion.h1>
@@ -151,7 +151,7 @@ const Hero = () => {
             variants={subtitleVariants}
             className="text-2xl md:text-3xl text-gray-600 max-w-3xl mx-auto"
             style={{ 
-              transform: 'translateZ(20px)',
+              transform: 'translateZ(15px)',
               textShadow: '0 2px 8px rgba(0,0,0,0.05)'
             }}
           >
@@ -161,16 +161,20 @@ const Hero = () => {
           <motion.div
             variants={buttonVariants}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-            style={{ transform: 'translateZ(60px)' }}
+            style={{ 
+              transform: 'translateZ(40px)',
+              transformStyle: 'preserve-3d'
+            }}
           >
             <motion.a
               href="#portfolio"
-              whileHover={{ scale: 1.05, z: 10 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors shadow-lg"
+              className="px-8 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors shadow-lg relative z-20"
               style={{ 
                 boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
-                transform: 'translateZ(10px)'
+                transform: 'translateZ(20px)',
+                pointerEvents: 'auto'
               }}
             >
               View My Work
@@ -178,12 +182,13 @@ const Hero = () => {
             
             <motion.a
               href="#contact"
-              whileHover={{ scale: 1.05, z: 10 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 border-2 border-black text-black rounded-full font-medium hover:bg-black hover:text-white transition-all shadow-lg"
+              className="px-8 py-3 border-2 border-black text-black rounded-full font-medium hover:bg-black hover:text-white transition-all shadow-lg relative z-20"
               style={{ 
                 boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-                transform: 'translateZ(10px)'
+                transform: 'translateZ(20px)',
+                pointerEvents: 'auto'
               }}
             >
               Get In Touch
@@ -193,7 +198,7 @@ const Hero = () => {
           <motion.div
             variants={scrollVariants}
             className="pt-16"
-            style={{ transform: 'translateZ(25px)' }}
+            style={{ transform: 'translateZ(10px)' }}
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
