@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -69,24 +67,21 @@ const About = () => {
             
             <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
               <p>
-                I'm a passionate visual designer with over 4 years of experience 
-                creating compelling graphics that tell stories and drive engagement. 
-                My expertise spans across various design disciplines, from creative 
-                fanart to professional brand campaigns.
+                I'm Chandrahas Chigullapalli, a self-taught visual designer with over 4 years of experience 
+                creating thoughtful, engaging graphics. My work spans creative fanart, poster campaigns, 
+                thumbnails, branding, and social media design.
               </p>
               
               <p>
-                What sets me apart is my ability to blend technical proficiency 
-                with creative vision, always staying current with design trends 
-                while maintaining a timeless aesthetic approach. Every project 
-                is an opportunity to push creative boundaries and deliver 
-                exceptional results.
+                I come from a technical background with a B.Tech in Artificial Intelligence and Machine Learning, 
+                but design has always been where I feel most at home. I started exploring it on my own, 
+                learning through practice and curiosity, and gradually built up my skills with tools like 
+                Photoshop, Illustrator, and the rest of the Adobe Suite.
               </p>
               
               <p>
-                When I'm not designing, I'm exploring new techniques, studying 
-                visual trends, and finding inspiration in everything from 
-                architecture to nature.
+                I approach every project with a focus on clarity, composition, and detail—always aiming 
+                to create work that communicates effectively and leaves an impression.
               </p>
             </div>
           </motion.div>
@@ -132,4 +127,3 @@ const About = () => {
 };
 
 export default About;
-
