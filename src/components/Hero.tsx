@@ -1,8 +1,44 @@
-import React from 'react';
+
+import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FloatingShapes } from './ui/floating-shapes';
 
 const Hero = () => {
+  const heroRef = useRef<HTMLElement>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!heroRef.current) return;
+      
+      const rect = heroRef.current.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      
+      const rotateX = (e.clientY - centerY) / rect.height * -15; // Max 15 degrees
+      const rotateY = (e.clientX - centerX) / rect.width * 15; // Max 15 degrees
+      
+      setMousePosition({ x: rotateY, y: rotateX });
+    };
+
+    const handleMouseLeave = () => {
+      setMousePosition({ x: 0, y: 0 });
+    };
+
+    const heroElement = heroRef.current;
+    if (heroElement) {
+      heroElement.addEventListener('mousemove', handleMouseMove);
+      heroElement.addEventListener('mouseleave', handleMouseLeave);
+    }
+
+    return () => {
+      if (heroElement) {
+        heroElement.removeEventListener('mousemove', handleMouseMove);
+        heroElement.removeEventListener('mouseleave', handleMouseLeave);
+      }
+    };
+  }, []);
+
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -48,19 +84,39 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white overflow-hidden pt-32">
+    <section 
+      ref={heroRef}
+      id="home" 
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white overflow-hidden pt-32"
+      style={{ perspective: '1000px' }}
+    >
       {/* Animated Background */}
       <FloatingShapes />
       
-      <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+      <motion.div
+        className="max-w-7xl mx-auto px-6 text-center relative z-10"
+        style={{
+          transform: `rotateX(${mousePosition.y}deg) rotateY(${mousePosition.x}deg)`,
+          transformStyle: 'preserve-3d',
+          transition: 'transform 0.1s ease-out'
+        }}
+      >
         <motion.div
           initial="hidden"
           animate="visible"
           className="space-y-8"
+          style={{
+            transform: 'translateZ(50px)',
+            transformStyle: 'preserve-3d'
+          }}
         >
           <motion.h1
             variants={textVariants}
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-black leading-tight"
+            style={{ 
+              transform: 'translateZ(30px)',
+              textShadow: '0 5px 15px rgba(0,0,0,0.1)'
+            }}
           >
             Hi, I'm <br />
             <motion.span 
@@ -70,6 +126,7 @@ const Hero = () => {
                 color: "#eab308",
                 transition: { duration: 0.3 }
               }}
+              style={{ transform: 'translateZ(40px)' }}
             >
               Chandrahas Chigullapalli
               <motion.div
@@ -93,6 +150,10 @@ const Hero = () => {
           <motion.p
             variants={subtitleVariants}
             className="text-2xl md:text-3xl text-gray-600 max-w-3xl mx-auto"
+            style={{ 
+              transform: 'translateZ(20px)',
+              textShadow: '0 2px 8px rgba(0,0,0,0.05)'
+            }}
           >
             Visual Designer & Storyteller
           </motion.p>
@@ -100,21 +161,30 @@ const Hero = () => {
           <motion.div
             variants={buttonVariants}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            style={{ transform: 'translateZ(60px)' }}
           >
             <motion.a
               href="#portfolio"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, z: 10 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors"
+              className="px-8 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors shadow-lg"
+              style={{ 
+                boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+                transform: 'translateZ(10px)'
+              }}
             >
               View My Work
             </motion.a>
             
             <motion.a
               href="#contact"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, z: 10 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 border-2 border-black text-black rounded-full font-medium hover:bg-black hover:text-white transition-all"
+              className="px-8 py-3 border-2 border-black text-black rounded-full font-medium hover:bg-black hover:text-white transition-all shadow-lg"
+              style={{ 
+                boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                transform: 'translateZ(10px)'
+              }}
             >
               Get In Touch
             </motion.a>
@@ -123,6 +193,7 @@ const Hero = () => {
           <motion.div
             variants={scrollVariants}
             className="pt-16"
+            style={{ transform: 'translateZ(25px)' }}
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
@@ -134,7 +205,7 @@ const Hero = () => {
             </motion.div>
           </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };
