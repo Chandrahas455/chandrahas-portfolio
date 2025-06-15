@@ -1,3 +1,4 @@
+
 "use client"
 
 import { memo, useEffect, useLayoutEffect, useMemo, useState } from "react"
@@ -9,6 +10,8 @@ import {
   useTransform,
 } from "framer-motion"
 import { ChevronLeft } from "lucide-react"
+
+const useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect
 
 type UseMediaQueryOptions = {
   defaultValue?: boolean
