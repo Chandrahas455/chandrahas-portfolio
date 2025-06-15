@@ -92,7 +92,7 @@ const Hero = () => {
 
           <motion.p
             variants={subtitleVariants}
-            className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto"
+            className="text-2xl md:text-3xl text-gray-600 max-w-3xl mx-auto"
           >
             Visual Designer & Storyteller
           </motion.p>
