@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FloatingShapes } from './ui/floating-shapes';
@@ -133,7 +132,8 @@ const Hero = () => {
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
                 transition={{ duration: 1, delay: 1.5 }}
-                className="absolute bottom-2 left-0 h-1 bg-black group-hover:bg-yellow-500 transition-colors duration-300"
+                className="absolute bottom-2 left-0 right-0 h-1 bg-black group-hover:bg-yellow-500 transition-colors duration-300"
+                style={{ width: 'auto' }}
               />
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
@@ -170,7 +170,7 @@ const Hero = () => {
               href="#portfolio"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors shadow-lg relative z-20"
+              className="px-8 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors shadow-lg relative z-50"
               style={{ 
                 boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
                 transform: 'translateZ(20px)',
@@ -184,7 +184,7 @@ const Hero = () => {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 border-2 border-black text-black rounded-full font-medium hover:bg-black hover:text-white transition-all shadow-lg relative z-20"
+              className="px-8 py-3 border-2 border-black text-black rounded-full font-medium hover:bg-black hover:text-white transition-all shadow-lg relative z-50"
               style={{ 
                 boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
                 transform: 'translateZ(20px)',
