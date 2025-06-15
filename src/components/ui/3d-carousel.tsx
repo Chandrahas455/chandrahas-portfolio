@@ -1,3 +1,4 @@
+
 "use client"
 
 import { memo, useEffect, useLayoutEffect, useMemo, useState } from "react"
@@ -176,54 +177,35 @@ const Carousel = memo(
           {cards.map((project, i) => (
             <motion.div
               key={`key-${project.id}-${i}`}
-              className="absolute flex h-full origin-center items-center justify-center rounded-xl shadow-lg"
+              className="absolute flex h-full origin-center items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm p-4 shadow-lg"
               style={{
                 width: `${faceWidth}px`,
                 transform: `rotateY(${
                   i * (360 / faceCount)
                 }deg) translateZ(${radius}px)`,
-                transformStyle: "preserve-3d",
-                backfaceVisibility: "hidden",
               }}
               onClick={() => handleClick(project, i)}
             >
-              {/* Front face */}
-              <div 
-                className="absolute inset-0 bg-white/80 backdrop-blur-sm p-4 rounded-xl"
-                style={{
-                  backfaceVisibility: "hidden",
-                }}
-              >
-                <div className="w-full space-y-3">
-                  <motion.img
-                    src={project.image}
-                    alt={project.title}
-                    layoutId={`img-${project.id}`}
-                    className="pointer-events-none w-full rounded-xl object-cover aspect-[4/5]"
-                    initial={{ filter: "blur(4px)" }}
-                    layout="position"
-                    animate={{ filter: "blur(0px)" }}
-                    transition={transition}
-                  />
-                  <div className="text-center space-y-1">
-                    <h3 className="text-sm font-bold text-black line-clamp-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-xs text-gray-600 line-clamp-2">
-                      {project.description}
-                    </p>
-                  </div>
+              <div className="w-full space-y-3">
+                <motion.img
+                  src={project.image}
+                  alt={project.title}
+                  layoutId={`img-${project.id}`}
+                  className="pointer-events-none w-full rounded-xl object-cover aspect-[4/5]"
+                  initial={{ filter: "blur(4px)" }}
+                  layout="position"
+                  animate={{ filter: "blur(0px)" }}
+                  transition={transition}
+                />
+                <div className="text-center space-y-1">
+                  <h3 className="text-sm font-bold text-black line-clamp-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-xs text-gray-600 line-clamp-2">
+                    {project.description}
+                  </p>
                 </div>
               </div>
-              
-              {/* Back face - plain white */}
-              <div 
-                className="absolute inset-0 bg-white rounded-xl shadow-lg"
-                style={{
-                  transform: "rotateY(180deg)",
-                  backfaceVisibility: "hidden",
-                }}
-              />
             </motion.div>
           ))}
         </motion.div>
