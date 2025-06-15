@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { StarBorder } from './ui/star-border';
 import DisplayCards from './ui/display-cards';
+import { ThreeDPhotoCarousel } from './ui/3d-carousel';
 import ProjectModal from './ProjectModal';
 
 const Portfolio = () => {
@@ -372,57 +373,15 @@ const Portfolio = () => {
         ) : (
           <motion.div
             key={selectedCategory}
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="min-h-[500px] py-8"
           >
-            {filteredProjects.map((project) => (
-              <motion.div
-                key={project.id}
-                variants={itemVariants}
-                className="group cursor-pointer"
-                onClick={() => handleProjectClick(project)}
-              >
-                <div className="relative overflow-hidden rounded-2xl border-2 border-gray-200 bg-white shadow-lg hover:shadow-xl hover:border-black/20 transition-all duration-300">
-                  <div className="relative aspect-[4/5] overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileHover={{ opacity: 1, scale: 1 }}
-                        className="text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full"
-                      >
-                        {project.gallery ? `View Gallery (${project.gallery.length})` : 'View Project'}
-                      </motion.div>
-                    </div>
-                  </div>
-                  
-                  <div className="p-6 space-y-3">
-                    <h3 className="text-xl font-bold text-black group-hover:text-gray-600 transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 pt-2">
-                      {project.tools.map((tool, index) => (
-                        <span
-                          key={index}
-                          className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-medium"
-                        >
-                          {tool}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+            <ThreeDPhotoCarousel 
+              projects={filteredProjects}
+              onProjectClick={handleProjectClick}
+            />
           </motion.div>
         )}
       </div>
