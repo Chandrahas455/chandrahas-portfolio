@@ -60,7 +60,7 @@ export function useMediaQuery(
 }
 
 const duration = 0.15
-const transition = { duration, ease: [0.32, 0.72, 0, 1], filter: "blur(4px)" }
+const transition = { duration, ease: [0.32, 0.72, 0, 1] }
 const transitionOverlay = { duration: 0.5, ease: [0.32, 0.72, 0, 1] }
 
 interface CarouselProps {
@@ -127,7 +127,7 @@ const Carousel = memo(
           {cards.map((project, i) => (
             <motion.div
               key={`key-${project.id}-${i}`}
-              className="absolute flex h-full origin-center items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm p-4 shadow-lg"
+              className="absolute flex h-full origin-center items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm p-3 shadow-lg"
               style={{
                 width: `${faceWidth}px`,
                 transform: `rotateY(${
@@ -136,22 +136,23 @@ const Carousel = memo(
               }}
               onClick={() => handleClick(project, i)}
             >
-              <div className="w-full space-y-3">
+              <div className="w-full h-full flex flex-col space-y-2">
                 <motion.img
                   src={project.image}
                   alt={project.title}
                   layoutId={`img-${project.id}`}
-                  className="pointer-events-none w-full rounded-xl object-cover aspect-[4/5]"
+                  className="pointer-events-none w-full rounded-lg object-cover flex-shrink-0"
+                  style={{ aspectRatio: '4/3', maxHeight: '60%' }}
                   initial={{ filter: "blur(4px)" }}
                   layout="position"
                   animate={{ filter: "blur(0px)" }}
                   transition={transition}
                 />
-                <div className="text-center space-y-1">
-                  <h3 className="text-sm font-bold text-black line-clamp-2">
+                <div className="text-center space-y-1 flex-1 flex flex-col justify-center min-h-0">
+                  <h3 className="text-xs font-bold text-black leading-tight line-clamp-2 overflow-hidden">
                     {project.title}
                   </h3>
-                  <p className="text-xs text-gray-600 line-clamp-2">
+                  <p className="text-[10px] text-gray-600 leading-tight line-clamp-3 overflow-hidden">
                     {project.description}
                   </p>
                 </div>
