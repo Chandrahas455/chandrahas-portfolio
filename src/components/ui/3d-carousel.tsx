@@ -8,9 +8,7 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion"
-
-export const useIsomorphicLayoutEffect =
-  typeof window !== "undefined" ? useLayoutEffect : useEffect
+import { ChevronLeft } from "lucide-react"
 
 type UseMediaQueryOptions = {
   defaultValue?: boolean
@@ -77,6 +75,7 @@ const Carousel = memo(
     isCarouselActive,
   }: CarouselProps) => {
     const isScreenSizeSm = useMediaQuery("(max-width: 640px)")
+    const [showSwipeHint, setShowSwipeHint] = useState(true)
     const faceCount = cards.length
     
     // Make cards smaller and more zoomed out for all categories
@@ -91,15 +90,59 @@ const Carousel = memo(
       (value) => `rotate3d(0, 1, 0, ${value}deg)`
     )
 
+    // Hide swipe hint after user interacts or after 5 seconds
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setShowSwipeHint(false)
+      }, 5000)
+
+      return () => clearTimeout(timer)
+    }, [])
+
+    const handleDragStart = () => {
+      setShowSwipeHint(false)
+    }
+
     return (
       <div
-        className="flex h-full items-center justify-center"
+        className="flex h-full items-center justify-center relative"
         style={{
           perspective: "1000px",
           transformStyle: "preserve-3d",
           willChange: "transform",
         }}
       >
+        {/* Swipe Hint Arrow */}
+        <AnimatePresence>
+          {showSwipeHint && isCarouselActive && (
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.5 }}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 pointer-events-none"
+            >
+              <motion.div
+                animate={{ 
+                  x: [-10, 10, -10],
+                  opacity: [0.6, 1, 0.6]
+                }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="flex items-center gap-2 bg-black/80 text-white px-4 py-2 rounded-full backdrop-blur-sm"
+              >
+                <span className="text-sm font-medium whitespace-nowrap">
+                  {isScreenSizeSm ? "Swipe" : "Swipe left"}
+                </span>
+                <ChevronLeft className="w-4 h-4" />
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         <motion.div
           drag={isCarouselActive ? "x" : false}
           className="relative flex h-full origin-center cursor-grab justify-center active:cursor-grabbing"
@@ -109,6 +152,7 @@ const Carousel = memo(
             width: cylinderWidth,
             transformStyle: "preserve-3d",
           }}
+          onDragStart={handleDragStart}
           onDrag={(_, info) =>
             isCarouselActive &&
             rotation.set(rotation.get() + info.offset.x * 0.05)
